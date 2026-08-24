@@ -1,28 +1,11 @@
-TRUE SPLIT V4
+FIXED V5 — DESIGN-PRESERVING MULTI-PAGE
 
-This is a genuine visible-HTML split, not the previous menu-only demo.
-
-Home:
-- Shows only the Home dashboard.
-
-Each module page:
-- Has its own URL.
-- Does NOT contain the Home dashboard.
-- Contains only the selected module shell plus the shared study/test/result runtime needed by that module.
-- Keeps the original CSS/design and original data/function scripts so the existing behavior continues to work.
-- Has its own ad slot placeholder.
-
-Pages:
-index.html
-vocabulary.html
-counting.html
-clock.html
-calendar.html
-listening.html
-synonym-antonym.html
-grammar.html
-conversation.html
-scanner.html
-mixed-test.html
-
-Replace each page's ADVERTISEMENT placeholder with the ad code you are approved to use.
+Important:
+- index.html is the original final website UI with its original footer, About/Privacy/Terms/Disclaimer/Contact, Profile, Leaderboard, Admin, authentication and dashboard structure preserved.
+- Only the dashboard card click behavior was changed: each section now navigates to its own HTML page.
+- Each module page is based on the ORIGINAL full file, not a rebuilt/stripped copy.
+- Module pages hide only the Home dashboard and automatically open their own section.
+- The original Profile, Leaderboard, Admin, footer/legal modal, authentication and design remain available.
+- Module page Back/Home navigates to index.html.
+- No visible "ADVERTISEMENT — Home" placeholder was added.
+- For Adsterra, place the approved ad code in the desired location on each HTML page; do not add a visible placeholder that changes the design.
