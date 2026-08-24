@@ -1,11 +1,34 @@
-FIXED V5 — DESIGN-PRESERVING MULTI-PAGE
+FINAL MULTI-PAGE V6
 
-Important:
-- index.html is the original final website UI with its original footer, About/Privacy/Terms/Disclaimer/Contact, Profile, Leaderboard, Admin, authentication and dashboard structure preserved.
-- Only the dashboard card click behavior was changed: each section now navigates to its own HTML page.
-- Each module page is based on the ORIGINAL full file, not a rebuilt/stripped copy.
-- Module pages hide only the Home dashboard and automatically open their own section.
-- The original Profile, Leaderboard, Admin, footer/legal modal, authentication and design remain available.
-- Module page Back/Home navigates to index.html.
-- No visible "ADVERTISEMENT — Home" placeholder was added.
-- For Adsterra, place the approved ad code in the desired location on each HTML page; do not add a visible placeholder that changes the design.
+This version is deliberately based on the ORIGINAL final HTML.
+
+What changed:
+1. Home/index.html:
+   - Original design and layout preserved.
+   - Profile, Leaderboard, Admin, Login/Register, footer, About, Privacy,
+     Terms, Disclaimer and Contact are preserved.
+   - Dashboard section buttons now navigate to separate HTML pages.
+
+2. Module pages:
+   - Each is a full copy of the original final HTML.
+   - No original design/components were removed.
+   - Only the requested section is automatically opened after the page loads.
+   - Back/Home returns to index.html.
+
+3. Ads:
+   - Each HTML page contains an EMPTY, invisible ad container.
+   - No visible "ADVERTISEMENT" text has been added.
+   - Insert the approved Adsterra code into the corresponding container later.
+
+Pages:
+index.html
+vocabulary.html
+counting.html
+clock.html
+calendar.html
+listening.html
+synonym-antonym.html
+grammar.html
+conversation.html
+scanner.html
+mixed-test.html

@@ -1,4 +1,4 @@
-<!doctype html><html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#6d5dfc"><title>MAHAMUD EFX Korean Study Master — Numbers</title><style>
+<!doctype html><html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#6d5dfc"><title>MAHAMUD EFX Korean Study Master</title><style>
 :root{--ink:#121827;--muted:#748096;--line:#e6e9f0;--p:#5148d8;--p2:#2f28a8;--bg:#f3f5fa;--good:#087f5b;--bad:#b92b35;--card:#fff}
 *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 10% 0,#e9e7ff,transparent 31%),radial-gradient(circle at 90% 4%,#dcecff,transparent 28%),linear-gradient(180deg,#f9fafc,#eef1f6);font-family:Inter,Arial,"Noto Sans Bengali","Noto Sans KR",sans-serif;color:var(--ink)}
 .wrap{width:min(980px,100%);margin:auto;padding:18px 14px 50px}.card{background:rgba(255,255,255,.96);border:1px solid #e3e6ee;border-radius:26px;box-shadow:0 18px 55px #1c2a4b12;padding:22px;margin:13px 0}.brand{text-align:center;padding:30px 20px;background:linear-gradient(145deg,#fff,#f3f2ff)}.logo{width:64px;height:64px;border-radius:19px;margin:auto;display:grid;place-items:center;color:#fff;background:linear-gradient(145deg,var(--p),#8b84f5);font-size:26px;font-weight:950;box-shadow:0 12px 28px #5148d83b}.brand h1{margin:12px 0 4px;letter-spacing:2px;font-size:30px}.brand p{margin:0;color:var(--muted);letter-spacing:1.6px;font-size:12px}
@@ -766,11 +766,6 @@ input:focus,select:focus{border-color:#7fb7ec!important;box-shadow:0 0 0 4px rgb
 })();
 </script>
 
-
-<style id="MEFX_FIXED_PAGE_SCOPE">
-/* Physical module page: numbers. Original UI/design is intentionally preserved. */
-body.mefx-fixed-module #home{display:none!important}
-</style>
 </head><body>
 <div id="mefxAuthGate">
   <div class="mefx-auth-card">
@@ -815,6 +810,7 @@ body.mefx-fixed-module #home{display:none!important}
 </div>
 <div class="wrap">
 <header class="card brand"><div class="logo">한</div><h1>KOREAN STUDY MASTER WEBSITE</h1><p></p></header><div id="mefxAppTools" class="mefx-tools hidden"><button class="btn secondary" onclick="MEFXOpenProfile()">👤 Profile</button><button class="btn secondary" onclick="MEFXOpenLeaderboard()">🏆 Leaderboard</button><button id="mefxAdminBtn" class="btn secondary hidden" onclick="MEFXOpenAdmin()">👑 Admin</button><span id="mefxUserPill" class="mefx-user-pill">👤 User</span><button class="btn ghost" onclick="MEFXSignOut()">Logout</button></div>
+<div id="MEFX_AD_SLOT_NUMBERS" data-mefx-ad-page="numbers"></div>
 <section id="home" class="card"><span class="badge">KOREAN STUDY MASTER</span><h2 class="sectionTitle">Study • Practice • Exam</h2><p class="subtitle">সবকিছু এক জায়গায়। তোমার progress এই browser-এ সংরক্ষিত থাকবে।</p><div class="dashboard" id="dashboard"></div></section>
 <section id="section" class="card hidden"><div class="row"><button class="btn secondary" onclick="goHome()">← Home</button><span id="sectionBadge" class="badge"></span></div><h2 id="sectionTitle" class="sectionTitle"></h2><p id="sectionSub" class="subtitle"></p><div id="sectionBody"></div></section>
 <section id="study" class="card hidden"><div class="row"><button class="btn secondary" onclick="backToSection()">← Back</button><span id="studyBadge" class="badge"></span></div><div id="studyBody"></div></section>
@@ -1639,32 +1635,32 @@ MEFXInit();
 </script>
 
 
-<script id="MEFX_FIXED_PAGE_BOOT">
+<script id="MEFX_MULTIPAGE_ROUTER_V6">
 (function(){
-  var target='numbers';
-  document.body.classList.add('mefx-fixed-module');
-
-  var originalGoHome=window.goHome;
-  window.goHome=function(){ window.location.href='index.html'; };
-
-  function openTarget(){
+  const TARGET='numbers';
+  function startTarget(){
     try{
       if(typeof openSection==='function'){
-        openSection(target);
+        openSection(TARGET);
         return true;
       }
-    }catch(e){ console.warn('MEFX page boot:',e); }
+    }catch(e){console.warn('MEFX multipage:',e);}
     return false;
   }
 
+  const oldGoHome=window.goHome;
+  window.goHome=function(){
+    window.location.href='index.html';
+  };
+
   if(document.readyState==='loading'){
     document.addEventListener('DOMContentLoaded',function(){
-      setTimeout(openTarget,300);
-      setTimeout(openTarget,900);
+      setTimeout(startTarget,350);
+      setTimeout(startTarget,900);
     });
   }else{
-    setTimeout(openTarget,300);
-    setTimeout(openTarget,900);
+    setTimeout(startTarget,350);
+    setTimeout(startTarget,900);
   }
 })();
 </script>
